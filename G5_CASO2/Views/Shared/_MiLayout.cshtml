@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/CSS/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <div class="cont_header">
+            <div class="cont_ancla">
+                <a class="ancla" href="~/Guardar">Crear</a>                         <!--ojo-->
+            </div>
+
+            <div class="cont_ancla">
+                <a class="ancla" href="~/Views/Empleado/Detalle.cshtml">Ver</a>
+            </div>
+
+            <div class="cont_ancla">
+                <a class="ancla" href="">Borrar</a>
+            </div>
+
+            <div class="cont_ancla">
+                <a class="ancla" href="">Actualizar</a>
+            </div>
+        </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

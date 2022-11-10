@@ -1,0 +1,58 @@
+﻿@model IEnumerable<G5_CASO2.Models.EMPLEADO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MiLayout.cshtml"; // quitar para que se vea el estilo de la vista bien
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Guardar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.APELLIDO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SALARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.APELLIDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SALARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Modificar", "Modificar", new { id=item.ID_EMPLEADO }) |
+            @Html.ActionLink("Detalle", "Detalle", new { id=item.ID_EMPLEADO }) |
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.ID_EMPLEADO })
+        </td>
+    </tr>
+}
+
+</table>

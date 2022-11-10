@@ -1,0 +1,27 @@
+﻿body {
+    margin: 0;
+}
+
+.header {
+    background-color: cadetblue;
+    min-height: 40px
+}
+
+.cont_header {
+    display: flex;
+    margin: 0 auto;
+}
+
+.cont_ancla {
+
+}
+
+.ancla {
+    text-decoration: none;
+    margin: 15px;
+    color: black;
+}
+
+.ancla:hover {
+    color: aliceblue;
+}
